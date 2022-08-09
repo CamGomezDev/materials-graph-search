@@ -2,7 +2,7 @@
 
 This repository contains some functions and utilities useful for turning a set of materials into a graph, each node representing each material, and then for searching within that graph possible new materials of a certain type by judging how similar they are to others. You can see a series of examples in the file [examples](../examples.ipynb).
 
-<p align="center"><img src="readme_pic.png" width=800/></p>
+<p align="center"><img src="readme_pic.png" width=600/></p>
 
 All of the functions, properly documented, are inside of the file [graph_utilities.py](../graph_utilities.py).
 
