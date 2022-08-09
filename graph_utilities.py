@@ -228,7 +228,9 @@ class GraphUtilities:
         if method == "wasserstein":
             # for i in trange(self._half_diff_matrix.shape[0]):
             #     for j in range(i+1, self._half_diff_matrix.shape[1]):
-            #         self._half_diff_matrix[i][j] = sum(abs(self.cumul_matrix[:,i] - self.cumul_matrix[:,j]))
+            #         self._half_diff_matrix[i][j] = sum(
+            #             abs(self.cumul_matrix[:,i] - self.cumul_matrix[:,j])
+            #         )
             no_calcs = self._half_diff_matrix.shape[1]-1
             for j in trange(no_calcs):
                 self._half_diff_matrix[j,-no_calcs+j:] = sum(abs(
