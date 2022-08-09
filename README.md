@@ -8,6 +8,6 @@ All of the functions, properly documented, are inside of the file [graph_utiliti
 
 # Installation
 
-For all of the functions in this repository to run it is necessary to have installed several dependencies, including [ForceAtlas2](https://github.com/bhargavchippada/forceatlas2) and [UMAP](hhttps://umap-learn.readthedocs.io/en/latest/) for the node positions calculation, ideally with Python 3.8:
+For all of the functions in this repository to run it is necessary to have installed several dependencies, including [ForceAtlas2](https://github.com/bhargavchippada/forceatlas2) and [UMAP](https://umap-learn.readthedocs.io/en/latest/) for the node positions calculation, ideally with Python 3.8:
 
 `pip install numpy pandas tqdm scipy fa2 matplotlib plotly scikit-learn umap-learn numba jupyter`
