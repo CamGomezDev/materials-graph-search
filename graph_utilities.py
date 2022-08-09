@@ -170,12 +170,12 @@ class GraphUtilities:
                 x_2 = np.arange(channel_length, channel_length*2, 1)
                 x_3 = np.arange(channel_length*2, channel_length*3, 1)
 
-                normal_1 = norm.pdf(x_1, 2*channel_length/3, 40)/ \
-                    max(norm.pdf(x_1, 2*255/3, 40))
-                normal_2 = norm.pdf(x_2, channel_length + 2*channel_length/3, 40)/ \
-                    max(norm.pdf(x_2, np.mean(x_2), 40))
-                normal_3 = norm.pdf(x_3, channel_length*2 + 2*channel_length/3, 40)/ \
-                    max(norm.pdf(x_3, np.mean(x_3), 40))
+                gauss_1 = norm.pdf(x_1, 2*channel_length/3, 40)
+                gauss_2 = norm.pdf(x_2, channel_length + 2*channel_length/3, 40)
+                gauss_3 = norm.pdf(x_3, channel_length*2 + 2*channel_length/3, 40)
+                normal_1 = gauss_1/max(gauss_1)
+                normal_2 = gauss_2/max(gauss_2)
+                normal_3 = gauss_3/max(gauss_3)
 
                 normaliser = np.concatenate((normal_1, normal_2, normal_3))
 
@@ -219,7 +219,7 @@ class GraphUtilities:
             raise Exception("It's necessary to calculate the normalisation before "
                             "the Wasserstein difference matrix.")
         
-        print("Caculating difference matrix...")
+        print("Calculating difference matrix...")
 
         self._half_diff_matrix = np.empty((self.materials.shape[1], 
                                            self.materials.shape[1]))
